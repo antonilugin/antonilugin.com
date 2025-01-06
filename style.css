@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM Plex Mono&display=swap');
+
+
+.navitems {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    font-size: 20px;
+    font-family: 'IBM Plex Mono', serif;
+    text-decoration: none;
+}
+
+
+
+.navitems a{
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    transition: border-color 0.1s ease;
+    -webkit-text-stroke: 0.1px black;
+}
+
+.navitems a:hover{
+    color: rgb(250, 230, 13);
+    border-color: black;
+    text-decoration: underline;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 
+        1px 1px 1px rgb(0, 13, 255),
+        -1px -1px 1px rgba(255, 234, 0, 0.966);
+    animation: glitch 1s infinite;
+}
+
+
+.photo {
+    width: 150px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    border: 3px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    margin-left: 400px;
+    margin-top: 50px;
+}
+
+.photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;   
+    font-family: 'IBM Plex Mono', serif;
+    text-align: left;
+}
+
+
+
+.name {
+    display: flex;
+    margin-left: 290px;
+    margin-top: -250px;
+    font-size: 40px;
+    font-weight:bolder;
+    -webkit-text-stroke: 1px black;
+}
+
+.description {
+    font-size: 17px;         
+    max-width: 600px; 
+    margin-left: 600px;
+
+}
+
+.description a {
+    text-decoration: none;
+    font-weight: bolder; 
+    font-weight: 900;
+    position: relative;
+    color: rgb(0, 0, 0);
+    -webkit-text-stroke: 0.1px black;
+}
+
+.description a:hover {
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: rgb(250, 230, 13);
+    text-shadow: 
+        1px 1px 1px rgb(0, 13, 255),
+        -1px -1px 1px rgba(255, 234, 0, 0.966);
+    animation: glitch 1s infinite;
+}
+
+
+.tooltip::after {
+    content: attr(data-tooltip); 
+    position: absolute;
+    left: 50%;
+    bottom: 110%; 
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size:  16px;
+    text-shadow: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+
+.tooltip:hover::after {
+    opacity: 1;
+}
+
+
+
+
+.contact {
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    font-family: 'IBM Plex Mono', serif;
+
+}
+
+
+.elements {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    font-family: 'IBM Plex Mono', serif;
+}
+
+.elements a {
+    text-decoration: none;
+    font-weight: bolder; 
+    color: rgb(0, 0, 0);
+    -webkit-text-stroke: 0.1px black;
+}
+
+.elements a:hover {
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: rgb(250, 230, 13);
+    text-shadow: 
+        1px 1px 1px rgb(0, 13, 255),
+        -1px -1px 1px rgba(255, 234, 0, 0.966);
+    animation: glitch 1s infinite;
+}
+
+@media (max-width: 1115px) {
+    .photo {
+        margin-left: 0; 
+        margin-top: 20px; 
+        width: 120px; 
+        height: 180px;
+    }
+
+    .text {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .name {
+        margin-left: 0;
+        margin-top: 10px;
+        font-size: 24px; 
+    }
+
+    .description {
+        font-size: 16px; 
+        margin-left: 0; 
+        padding: 0 10px;
+    }
+
+    .navitems {
+        flex-direction: column; 
+        gap: 10px; 
+    }
+
+    .elements {
+        gap: 15px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .photo {
+        width: 100px;
+        height: 150px;
+    }
+
+    .description {
+        font-size: 14px; 
+    }
+
+    .name {
+        font-size: 20px; 
+    }
+}
+
+
+.projects {
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 20%;
+    background-color: rgb(85, 168, 245);
+    border: 2px solid black;
+    padding: 10px;
+    margin: 20px auto;
+    color: rgb(0, 0, 0);
+    font-family: 'IBM Plex Mono', serif;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3 ease;
+}
+
+.projects:hover {
+    width: 200px;
+    height: 200px;
+    color: black;
+}
+.one img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+    border-radius: 20%;
+}
+
+.github {
+    position: absolute;
+    left: 50%; 
+    transform: translateX(-50%);
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    opacity: 0; 
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.personal {
+    position: absolute;
+    text-align: center;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    opacity: 0; 
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.github {
+    top: 40%;
+}
+
+.personal {
+    
+    top: 80%;
+    left: 17%;
+}
+
+.projects p {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin: auto;
+    opacity: 0;
+    transition: opacity 0.5 ease;
+}
+
+.github:hover {
+    opacity: 1;
+}
+.projects:hover img {
+    opacity: 0;
+}
+
+.projects:hover p {
+    opacity: 1;
+}
